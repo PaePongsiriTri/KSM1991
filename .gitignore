@@ -11,6 +11,11 @@ coverage
 out
 build
 
+# cloudflare wrangler
+.wrangler
+.dev.vars
+.open-next
+
 # production
 dist
 

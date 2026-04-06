@@ -1,12 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Static HTML export — emits to ./out and bypasses OpenNext entirely.
+  output: "export",
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "framerusercontent.com" },
-    ],
+    // next/image optimizer is not available in static export.
+    unoptimized: true,
   },
+  // Match the legacy Framer URLs / let CF static assets resolve cleanly.
+  trailingSlash: true,
 };
 
 export default nextConfig;
