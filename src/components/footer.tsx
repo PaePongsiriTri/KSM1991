@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -6,11 +7,11 @@ export function Footer() {
       <div className="container-x py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-md bg-white text-brand-950 font-bold text-lg">
-              KS
+            <div className="flex h-14 w-14 items-center justify-center rounded-md bg-white p-1.5">
+              <Image src="/images/logo.png" alt="KSM logo" width={48} height={48} className="object-contain" />
             </div>
             <div className="leading-tight">
-              <div className="text-lg font-bold text-white">K.S.Manufactory</div>
+              <div className="text-lg font-extrabold text-white">K.S.MANUFACTORY</div>
               <div className="text-xs uppercase tracking-[0.2em] text-accent">
                 (1991) Limited
               </div>
