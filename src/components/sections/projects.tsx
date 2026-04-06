@@ -1,13 +1,42 @@
+import Image from "next/image";
+
 const projects = [
-  { name: "VAY AMATA", type: "Residential", location: "Amata, Chonburi" },
-  { name: "KAVE BANGSAEN", type: "Condominium", location: "Bangsaen" },
-  { name: "MONTE RANGSIT CAMPUS", type: "Mixed-use", location: "Rangsit" },
-  { name: "MIRA MONTE HUAHIN", type: "Residential", location: "Hua Hin" },
-  { name: "SO KASET", type: "Condominium", location: "Kaset, Bangkok" },
-  { name: "Modiz Rhyme Ramkhamhaeng", type: "Condominium", location: "Ramkhamhaeng" },
-  { name: "THE ORIGIN Sukhumvit E22", type: "High-rise", location: "Sukhumvit" },
-  { name: "SOHO Bangkok Ratchada", type: "Mixed-use", location: "Ratchada" },
-  { name: "ATMOZ SRIRACHA", type: "Condominium", location: "Sriracha" },
+  {
+    name: "KAVE BANGSAEN",
+    type: "Condominium",
+    location: "Bangsaen, Chonburi",
+    image: "/images/project-kave-bangsaen.png",
+  },
+  {
+    name: "MONTE RANGSIT CAMPUS",
+    type: "Mixed-use",
+    location: "Rangsit",
+    image: "/images/project-monte-rangsit.png",
+  },
+  {
+    name: "THE ORIGIN Sukhumvit E22",
+    type: "High-rise",
+    location: "Sukhumvit, Bangkok",
+    image: "/images/project-the-origin.png",
+  },
+  {
+    name: "VAY AMATA",
+    type: "Residential",
+    location: "Amata, Chonburi",
+    image: "/images/project-vay-amata.png",
+  },
+  {
+    name: "SO KASET",
+    type: "Condominium",
+    location: "Kaset, Bangkok",
+    image: "/images/project-so-kaset.png",
+  },
+  {
+    name: "ATMOZ SRIRACHA",
+    type: "Condominium",
+    location: "Sriracha, Chonburi",
+    image: "/images/project-atmoz-sriracha.png",
+  },
 ];
 
 export function Projects() {
@@ -33,7 +62,7 @@ export function Projects() {
             <h2 className="mt-3 text-3xl md:text-5xl font-bold leading-tight">
               ผลงานที่น่าภาคภูมิใจ
             </h2>
-            <p className="mt-5 text-brand-200">
+            <p className="mt-5 text-white/70">
               ความเชื่อมั่นจากผู้พัฒนาอสังหาริมทรัพย์ชั้นนำของประเทศไทย
               ตลอดระยะเวลากว่า 30 ปี
             </p>
@@ -46,32 +75,24 @@ export function Projects() {
           </a>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <article
               key={p.name}
-              className="group relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-brand-800 to-brand-900 hover:border-accent/50 transition-all"
+              className="group relative aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-accent/60 hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage: `linear-gradient(${
-                      [120, 45, 90, 60, 135, 75, 30, 105, 150][i % 9]
-                    }deg, rgba(201,169,106,0.3), rgba(70,99,138,0.5), rgba(28,41,66,0.8))`,
-                  }}
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
-                    backgroundSize: "32px 32px",
-                  }}
-                />
-              </div>
+              <Image
+                src={p.image}
+                alt={p.name}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
 
-              <div className="absolute top-5 left-5 text-xs font-semibold tracking-widest text-accent">
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/40 to-transparent" />
+
+              <div className="absolute top-5 left-5 text-xs font-semibold tracking-widest text-accent drop-shadow">
                 / {String(i + 1).padStart(2, "0")}
               </div>
 
@@ -82,7 +103,7 @@ export function Projects() {
                 <h3 className="mt-2 text-xl font-bold text-white leading-tight">
                   {p.name}
                 </h3>
-                <div className="mt-1 text-sm text-brand-200">{p.location}</div>
+                <div className="mt-1 text-sm text-white/75">{p.location}</div>
                 <div className="mt-4 h-px w-12 bg-accent group-hover:w-full transition-all duration-500" />
               </div>
             </article>
