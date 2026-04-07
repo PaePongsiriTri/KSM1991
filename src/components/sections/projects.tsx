@@ -1,43 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { projects as allProjects } from "@/lib/projects";
 
-const projects = [
-  {
-    name: "KAVE BANGSAEN",
-    type: "Condominium",
-    location: "Bangsaen, Chonburi",
-    image: "/images/project-kave-bangsaen.png",
-  },
-  {
-    name: "MONTE RANGSIT CAMPUS",
-    type: "Mixed-use",
-    location: "Rangsit",
-    image: "/images/project-monte-rangsit.png",
-  },
-  {
-    name: "THE ORIGIN Sukhumvit E22",
-    type: "High-rise",
-    location: "Sukhumvit, Bangkok",
-    image: "/images/project-the-origin.png",
-  },
-  {
-    name: "VAY AMATA",
-    type: "Residential",
-    location: "Amata, Chonburi",
-    image: "/images/project-vay-amata.png",
-  },
-  {
-    name: "SO KASET",
-    type: "Condominium",
-    location: "Kaset, Bangkok",
-    image: "/images/project-so-kaset.png",
-  },
-  {
-    name: "ATMOZ SRIRACHA",
-    type: "Condominium",
-    location: "Sriracha, Chonburi",
-    image: "/images/project-atmoz-sriracha.png",
-  },
-];
+const projects = allProjects.slice(0, 6);
 
 export function Projects() {
   return (
@@ -67,19 +32,20 @@ export function Projects() {
               ตลอดระยะเวลากว่า 30 ปี
             </p>
           </div>
-          <a
-            href="#contact"
+          <Link
+            href="/projects/"
             className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-white transition-colors"
           >
             ดูผลงานทั้งหมด →
-          </a>
+          </Link>
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
-            <article
-              key={p.name}
-              className="group relative aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-accent/60 hover:-translate-y-1 transition-all duration-300"
+            <Link
+              key={p.slug}
+              href={`/projects/${p.slug}/`}
+              className="group relative block aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-accent/60 hover:-translate-y-1 transition-all duration-300"
             >
               <Image
                 src={p.image}
@@ -103,11 +69,22 @@ export function Projects() {
                 <h3 className="mt-2 text-xl font-bold text-white leading-tight">
                   {p.name}
                 </h3>
-                <div className="mt-1 text-sm text-white/75">{p.location}</div>
+                <div className="mt-1 text-sm text-white/75">
+                  {p.province}, {p.year}
+                </div>
                 <div className="mt-4 h-px w-12 bg-accent group-hover:w-full transition-all duration-500" />
               </div>
-            </article>
+            </Link>
           ))}
+        </div>
+
+        <div className="mt-12 flex md:hidden justify-center">
+          <Link
+            href="/projects/"
+            className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:border-accent hover:text-accent transition-colors"
+          >
+            ดูผลงานทั้งหมด →
+          </Link>
         </div>
       </div>
     </section>

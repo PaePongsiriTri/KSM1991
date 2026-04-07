@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="bg-brand-950 text-brand-100">
-      <div className="container-x py-16 grid gap-12 md:grid-cols-4">
+      <div className="container-x py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-5">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
             <div className="flex h-14 w-14 items-center justify-center rounded-md bg-white p-1.5">
@@ -29,12 +29,64 @@ export function Footer() {
             บริการ
           </h4>
           <ul className="space-y-2 text-sm text-brand-300">
-            <li>Door & Window</li>
-            <li>Stickwall System</li>
-            <li>Unitized System</li>
-            <li>Glass Wall</li>
-            <li>Skylight & Skywalk</li>
-            <li>Railing</li>
+            <li>
+              <Link href="/services/door-window/" className="hover:text-accent transition-colors">
+                Door & Window
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/stickwall/" className="hover:text-accent transition-colors">
+                Stickwall System
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/unitized/" className="hover:text-accent transition-colors">
+                Unitized System
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/glass-wall/" className="hover:text-accent transition-colors">
+                Glass Wall
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/skylight-skywalk/" className="hover:text-accent transition-colors">
+                Skylight & Skywalk
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/railing/" className="hover:text-accent transition-colors">
+                Railing
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+            บริษัท
+          </h4>
+          <ul className="space-y-2 text-sm text-brand-300">
+            <li>
+              <Link href="/projects/" className="hover:text-accent transition-colors">
+                ผลงาน
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/" className="hover:text-accent transition-colors">
+                บริการ
+              </Link>
+            </li>
+            <li>
+              <Link href="/blogs/" className="hover:text-accent transition-colors">
+                บทความ
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact/" className="hover:text-accent transition-colors">
+                ติดต่อเรา
+              </Link>
+            </li>
           </ul>
         </div>
 

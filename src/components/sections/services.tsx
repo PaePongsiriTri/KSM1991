@@ -1,43 +1,6 @@
 import Image from "next/image";
-
-const services = [
-  {
-    title: "DOOR AND WINDOW",
-    titleTh: "ประตู และ หน้าต่าง",
-    desc: "ระบบประตูและหน้าต่างอลูมิเนียมที่ได้มาตรฐาน ออกแบบให้เหมาะกับทุกโครงการ",
-    image: "/images/service-door-window.jpg",
-  },
-  {
-    title: "STICKWALL SYSTEM",
-    titleTh: "ระบบสติ๊กวอลล์",
-    desc: "ระบบผนังกระจกประกอบหน้างาน เหมาะกับอาคารสำนักงานและพาณิชย์ขนาดใหญ่",
-    image: "/images/service-stickwall.jpg",
-  },
-  {
-    title: "UNITIZED SYSTEM",
-    titleTh: "ระบบยูนิไทซ์",
-    desc: "ผนังกระจกสำเร็จรูปประกอบจากโรงงาน ติดตั้งรวดเร็วและคุณภาพสูง",
-    image: "/images/service-unitized.png",
-  },
-  {
-    title: "GLASS WALL",
-    titleTh: "ผนังกระจก",
-    desc: "ผนังกระจกเต็มบาน เพิ่มแสงธรรมชาติและความหรูหราให้กับอาคาร",
-    image: "/images/service-glass-wall.jpg",
-  },
-  {
-    title: "SKYLIGHT AND SKYWALK",
-    titleTh: "หลังคาโปร่ง และ ทางเดิน",
-    desc: "ออกแบบและติดตั้งโครงสร้างหลังคากระจกและทางเดินเชื่อมระหว่างอาคาร",
-    image: "/images/service-skylight.jpg",
-  },
-  {
-    title: "RAILING",
-    titleTh: "ราวกันตก",
-    desc: "ราวกันตกอลูมิเนียมและกระจก ให้ทั้งความปลอดภัยและความสวยงาม",
-    image: "/images/service-railing.png",
-  },
-];
+import Link from "next/link";
+import { services } from "@/lib/services";
 
 export function Services() {
   return (
@@ -71,9 +34,10 @@ export function Services() {
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <article
-              key={s.title}
-              className="group relative rounded-2xl overflow-hidden bg-brand-800/40 ring-1 ring-white/15 hover:ring-accent/60 hover:-translate-y-1 transition-all duration-300"
+            <Link
+              key={s.slug}
+              href={`/services/${s.slug}/`}
+              className="group relative block rounded-2xl overflow-hidden bg-brand-800/40 ring-1 ring-white/15 hover:ring-accent/60 hover:-translate-y-1 transition-all duration-300"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -92,10 +56,24 @@ export function Services() {
                 <div className="text-xs text-accent font-medium mt-1">
                   {s.titleTh}
                 </div>
-                <p className="mt-3 text-sm text-white/70 leading-relaxed">{s.desc}</p>
+                <p className="mt-3 text-sm text-white/70 leading-relaxed">
+                  {s.shortTh}
+                </p>
+                <div className="mt-5 text-xs font-semibold text-accent opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
+                  ดูรายละเอียด →
+                </div>
               </div>
-            </article>
+            </Link>
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <Link
+            href="/services/"
+            className="inline-flex items-center gap-2 rounded-full bg-accent text-brand-900 px-7 py-3.5 text-sm font-bold hover:bg-accent-dark transition-colors"
+          >
+            ดูบริการทั้งหมด →
+          </Link>
         </div>
       </div>
     </section>

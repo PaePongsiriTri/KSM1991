@@ -39,13 +39,13 @@ export function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              href="/#services"
+              href="/services/"
               className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-4 text-sm font-bold text-brand-900 shadow-lg shadow-black/20 hover:bg-accent-dark hover:text-brand-950 transition-all hover:translate-y-[-2px]"
             >
               บริการของเรา
             </Link>
             <Link
-              href="/#projects"
+              href="/projects/"
               className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 transition-all"
             >
               ดูผลงาน →

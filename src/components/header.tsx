@@ -5,10 +5,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "/#services", label: "บริการ", labelEn: "Services" },
-  { href: "/#projects", label: "ผลงาน", labelEn: "Projects" },
+  { href: "/services/", label: "บริการ", labelEn: "Services" },
+  { href: "/projects/", label: "ผลงาน", labelEn: "Projects" },
+  { href: "/blogs/", label: "บทความ", labelEn: "Blogs" },
   { href: "/#about", label: "เกี่ยวกับเรา", labelEn: "About" },
-  { href: "/#contact", label: "ติดต่อ", labelEn: "Contact" },
+  { href: "/contact/", label: "ติดต่อ", labelEn: "Contact" },
 ];
 
 export function Header() {
@@ -56,7 +57,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/contact/"
             className="rounded-md bg-accent px-5 py-2.5 text-sm font-bold text-brand-900 shadow hover:bg-accent-dark hover:text-brand-950 transition-colors"
           >
             ขอใบเสนอราคา
@@ -97,7 +98,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/#contact"
+              href="/contact/"
               className="mt-3 rounded-md bg-accent px-5 py-3 text-center text-sm font-bold text-brand-900"
               onClick={() => setOpen(false)}
             >

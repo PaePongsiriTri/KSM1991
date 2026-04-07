@@ -18,7 +18,11 @@ const prompt = Prompt({
 });
 
 export const metadata: Metadata = {
-  title: "K.S.Manufactory (1991) — ผู้เชี่ยวชาญงานประตู หน้าต่างอลูมิเนียม",
+  title: {
+    default:
+      "K.S.Manufactory (1991) — ผู้เชี่ยวชาญงานประตู หน้าต่างอลูมิเนียม",
+    template: "%s",
+  },
   description:
     "K.S.Manufactory (1991) Limited — over 30 years of experience in aluminium doors, windows, curtain walls, and glass installation for condominiums, residences, hospitals, and commercial buildings.",
   keywords: [
@@ -34,12 +38,21 @@ export const metadata: Metadata = {
     "K.S.Manufactory",
     "ชลบุรี",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/images/logo.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     title: "K.S.Manufactory (1991)",
     description:
       "Over 30 years of expertise in aluminium and glass façade systems across Thailand.",
     type: "website",
     locale: "th_TH",
+    images: ["/images/hero-worker.avif"],
   },
 };
 

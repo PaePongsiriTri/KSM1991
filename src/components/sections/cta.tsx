@@ -21,10 +21,10 @@ export function CTA() {
             โทร 038-241137
           </Link>
           <Link
-            href="#contact"
+            href="/contact/"
             className="rounded-full border-2 border-brand-950 px-7 py-4 text-center text-sm font-semibold hover:bg-brand-950 hover:text-white transition-colors"
           >
-            ส่งข้อความหาเรา →
+            ติดต่อเรา →
           </Link>
         </div>
       </div>

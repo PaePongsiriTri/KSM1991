@@ -4,7 +4,6 @@ import { Services } from "@/components/sections/services";
 import { Projects } from "@/components/sections/projects";
 import { WhyUs } from "@/components/sections/why-us";
 import { CTA } from "@/components/sections/cta";
-import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <Projects />
       <WhyUs />
       <CTA />
-      <Contact />
     </>
   );
 }
