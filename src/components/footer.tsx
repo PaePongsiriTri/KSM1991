@@ -107,7 +107,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="https://maps.app.goo.gl/qNqZK1BLRmW4v2meA"
+                href="https://maps.app.goo.gl/GvDz8iBS6DtpKYpS6"
                 target="_blank"
                 rel="noopener"
                 className="text-accent hover:text-white transition-colors"

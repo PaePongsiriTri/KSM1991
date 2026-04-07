@@ -122,22 +122,6 @@ export default async function ServiceDetailPage({
           <aside className="lg:col-span-2 space-y-6">
             <div className="rounded-2xl border border-brand-100 bg-brand-50/60 p-6">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-500">
-                Technical Specs
-              </h3>
-              <dl className="mt-4 divide-y divide-brand-100">
-                {service.specsTh.map((s) => (
-                  <div key={s.label} className="flex justify-between py-3 gap-4">
-                    <dt className="text-sm text-brand-600">{s.label}</dt>
-                    <dd className="text-sm font-semibold text-brand-950 text-right">
-                      {s.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            <div className="rounded-2xl border border-brand-100 bg-white p-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-500">
                 Applications · การใช้งาน
               </h3>
               <ul className="mt-4 space-y-3">

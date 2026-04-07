@@ -8,7 +8,6 @@ export type Service = {
   benefitsTh: string[];
   applicationsTh: string[];
   processTh: { step: string; titleTh: string; descTh: string }[];
-  specsTh: { label: string; value: string }[];
 };
 
 export const services: Service[] = [
@@ -40,12 +39,6 @@ export const services: Service[] = [
       { step: "03", titleTh: "ติดตั้งหน้างาน", descTh: "ติดตั้งด้วยทีมช่างที่มีประสบการณ์ ควบคุมระนาบและการรั่วซึมอย่างเข้มงวด" },
       { step: "04", titleTh: "ส่งมอบและรับประกัน", descTh: "ตรวจสอบคุณภาพและส่งมอบพร้อมบริการหลังการขาย" },
     ],
-    specsTh: [
-      { label: "วัสดุโปรไฟล์", value: "Aluminium Architectural Grade" },
-      { label: "กระจก", value: "5–12 mm (เลือกได้ตามดีไซน์)" },
-      { label: "ระบบซีล", value: "EPDM + Silicone Weatherproofing" },
-      { label: "มาตรฐาน", value: "ทดสอบ Water/Air/Wind Tightness" },
-    ],
   },
   {
     slug: "stickwall",
@@ -73,12 +66,6 @@ export const services: Service[] = [
       { step: "02", titleTh: "ตีระดับและยึดเฟรม", descTh: "ติดตั้งเสาและคาน (Mullion/Transom) ตามจุดยึดโครงสร้าง" },
       { step: "03", titleTh: "ติดกระจกและซีลกันน้ำ", descTh: "ติดตั้งกระจกและยาแนว Silicone Weatherproof" },
       { step: "04", titleTh: "ทดสอบการรั่วซึม", descTh: "Water Test/Leakage Test และส่งมอบงาน" },
-    ],
-    specsTh: [
-      { label: "ประเภท", value: "Stick-built Curtain Wall" },
-      { label: "โปรไฟล์", value: "Aluminium Extruded Mullion/Transom" },
-      { label: "กระจก", value: "Insulated / Laminated / Low-E" },
-      { label: "มาตรฐาน", value: "Water/Air Tightness Test" },
     ],
   },
   {
@@ -109,12 +96,6 @@ export const services: Service[] = [
       { step: "03", titleTh: "ยกติดตั้งหน้างาน", descTh: "ใช้เครนยก Panel ขึ้นติดตั้งกับโครงสร้างอาคาร" },
       { step: "04", titleTh: "ทดสอบและส่งมอบ", descTh: "Field Water Test และตรวจสอบก่อนส่งมอบ" },
     ],
-    specsTh: [
-      { label: "ประเภท", value: "Unitized Curtain Wall" },
-      { label: "Panel", value: "Factory-assembled Units" },
-      { label: "กระจก", value: "Double Glazed / Low-E / Laminated" },
-      { label: "มาตรฐาน", value: "Mock-up Test & Field Water Test" },
-    ],
   },
   {
     slug: "glass-wall",
@@ -143,12 +124,6 @@ export const services: Service[] = [
       { step: "02", titleTh: "เลือกระบบและกระจก", descTh: "แนะนำความหนาและชนิดกระจกที่เหมาะกับการใช้งาน" },
       { step: "03", titleTh: "สั่งผลิตกระจกนิรภัย", descTh: "ตัดและอบกระจกตามขนาดที่วัดหน้างาน" },
       { step: "04", titleTh: "ติดตั้งและปรับแต่ง", descTh: "ติดตั้งด้วยอุปกรณ์มาตรฐานและตรวจสอบความปลอดภัย" },
-    ],
-    specsTh: [
-      { label: "ความหนากระจก", value: "8–19 mm" },
-      { label: "ประเภท", value: "Tempered / Laminated / Low-E" },
-      { label: "ระบบ", value: "Frameless / Semi-frameless / Framed" },
-      { label: "อุปกรณ์", value: "Stainless / Aluminium Hardware" },
     ],
   },
   {
@@ -179,12 +154,6 @@ export const services: Service[] = [
       { step: "03", titleTh: "ติดตั้งโครงและกระจก", descTh: "ติดตั้งหน้างานพร้อมระบบซีลกันรั่วซึม" },
       { step: "04", titleTh: "ทดสอบน้ำรั่วซึม", descTh: "ทดสอบการรั่วซึมและส่งมอบ" },
     ],
-    specsTh: [
-      { label: "โครงสร้าง", value: "Aluminium / Steel Structure" },
-      { label: "กระจก", value: "Laminated Safety Glass" },
-      { label: "ระบบระบายน้ำ", value: "Integrated Drainage" },
-      { label: "มาตรฐาน", value: "Wind Load & Water Tightness" },
-    ],
   },
   {
     slug: "railing",
@@ -213,12 +182,6 @@ export const services: Service[] = [
       { step: "02", titleTh: "วัดและออกแบบ", descTh: "วัดหน้างานและคำนวณการรับแรงแนวนอน" },
       { step: "03", titleTh: "ผลิตและเตรียมกระจก", descTh: "ตัดและอบกระจก พร้อมประกอบอุปกรณ์" },
       { step: "04", titleTh: "ติดตั้งและตรวจรับ", descTh: "ติดตั้งพร้อมทดสอบความมั่นคงก่อนส่งมอบ" },
-    ],
-    specsTh: [
-      { label: "วัสดุ", value: "Aluminium / Stainless / Glass" },
-      { label: "กระจก", value: "Laminated Tempered 10+10 mm" },
-      { label: "ความสูงมาตรฐาน", value: "1.10 m (ตาม กม. ควบคุมอาคาร)" },
-      { label: "โหลด", value: "Horizontal Load Tested" },
     ],
   },
 ];

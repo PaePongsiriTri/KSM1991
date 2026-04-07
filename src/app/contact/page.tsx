@@ -85,7 +85,7 @@ export default function ContactPage() {
                   อ.บางละมุง จ.ชลบุรี 20150
                 </div>
                 <Link
-                  href="https://maps.app.goo.gl/qNqZK1BLRmW4v2meA"
+                  href="https://maps.app.goo.gl/GvDz8iBS6DtpKYpS6"
                   target="_blank"
                   rel="noopener"
                   className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-accent-dark hover:text-brand-900"
@@ -117,7 +117,7 @@ export default function ContactPage() {
             <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-brand-900/10 ring-1 ring-brand-100 aspect-[4/5] md:aspect-[4/3] lg:aspect-[4/5] bg-brand-50">
               <iframe
                 title="K.S.Manufactory (1991) location"
-                src="https://www.google.com/maps?q=153%2F1%20หมู่%201%20ต.บางละมุง%20อ.บางละมุง%20ชลบุรี%2020150&hl=th&output=embed"
+                src="https://www.google.com/maps?q=13.018685,100.932147&hl=th&z=16&output=embed"
                 width="100%"
                 height="100%"
                 loading="lazy"
@@ -128,7 +128,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link
-                href="https://maps.app.goo.gl/qNqZK1BLRmW4v2meA"
+                href="https://maps.app.goo.gl/GvDz8iBS6DtpKYpS6"
                 target="_blank"
                 rel="noopener"
                 className="inline-flex items-center gap-2 rounded-full bg-brand-900 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-800 transition-colors"
