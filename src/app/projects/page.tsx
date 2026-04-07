@@ -33,13 +33,17 @@ export default function ProjectsPage() {
 
         <div className="container-x relative">
           <div className="flex items-end justify-between gap-6 mb-14">
-            <div>
+            <div className="max-w-2xl">
               <div className="text-xs uppercase tracking-[0.25em] text-accent font-semibold">
-                Selected Projects
+                Selected Works
               </div>
               <h2 className="mt-3 text-2xl md:text-4xl font-bold">
-                {projects.length} โครงการที่ได้รับความไว้วางใจ
+                ตัวอย่างผลงานโครงการ
               </h2>
+              <p className="mt-4 text-sm md:text-base text-white/65 leading-relaxed">
+                ต่อไปนี้คือบางส่วนของโครงการที่เราได้รับความไว้วางใจตลอด 30+ ปี
+                ยังมีผลงานอีกจำนวนมากที่ไม่ได้แสดงไว้บนหน้านี้
+              </p>
             </div>
             <div className="hidden md:block text-sm text-white/60">
               Scroll • Click • Explore
