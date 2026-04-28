@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "บริการของเรา | K.S.Manufactory (1991)",
   description:
     "บริการครบวงจรด้านประตู–หน้าต่างอลูมิเนียม Stickwall, Unitized, ผนังกระจก, Skylight และราวกันตก โดย K.S.Manufactory (1991) Limited",
+  alternates: { canonical: "/services/" },
 };
 
 export default function ServicesPage() {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "ติดต่อเรา | K.S.Manufactory (1991)",
   description:
     "ติดต่อ K.S.Manufactory (1991) Limited · โทร 038-241137, 038-241536 · 153/1 หมู่ 1 ต.บางละมุง อ.บางละมุง จ.ชลบุรี 20150",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {

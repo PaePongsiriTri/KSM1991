@@ -19,6 +19,7 @@ export async function generateMetadata(
   return {
     title: `${blog.title} | K.S.Manufactory (1991)`,
     description: blog.excerpt,
+    alternates: { canonical: `/blogs/${blog.slug}/` },
   };
 }
 

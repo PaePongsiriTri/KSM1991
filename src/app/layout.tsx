@@ -22,6 +22,10 @@ const prompt = Prompt({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.ksm1991.co.th"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default:
       "K.S.Manufactory (1991) — ผู้เชี่ยวชาญงานประตู หน้าต่างอลูมิเนียม",

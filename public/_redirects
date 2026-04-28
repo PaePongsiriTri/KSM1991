@@ -1,0 +1,11 @@
+# Legacy Framer slugs → current slugs (fixes GSC 404 + duplicate canonical reports)
+/services/door-and-window/ /services/door-window/ 301
+/services/door-and-window /services/door-window/ 301
+/services/water-heater/ /services/ 301
+/services/water-heater /services/ 301
+/services/stickwall-system/ /services/stickwall/ 301
+/services/stickwall-system /services/stickwall/ 301
+/services/skylight-and-skywalk/ /services/skylight-skywalk/ 301
+/services/skylight-and-skywalk /services/skylight-skywalk/ 301
+/projects/the-origin-sukumvit-sai-laut-station-(-e22-station-)/ /projects/the-origin-sukhumvit-e22/ 301
+/projects/the-origin-sukumvit-sai-laut-station-(-e22-station-) /projects/the-origin-sukhumvit-e22/ 301

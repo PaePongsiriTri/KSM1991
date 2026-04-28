@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "บทความ | K.S.Manufactory (1991)",
   description:
     "บทความและคำแนะนำเกี่ยวกับงานประตู–หน้าต่างอลูมิเนียม กระจก Curtain Wall และการดูแลรักษาอาคารจากทีมผู้เชี่ยวชาญ KSM1991",
+  alternates: { canonical: "/blogs/" },
 };
 
 export default function BlogsPage() {

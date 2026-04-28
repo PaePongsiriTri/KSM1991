@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "ผลงานของเรา | K.S.Manufactory (1991)",
   description:
     "ผลงานการติดตั้งประตู–หน้าต่างอลูมิเนียม ผนังกระจก Curtain Wall และระบบกระจกอาคาร จากโครงการชั้นนำทั่วประเทศไทย",
+  alternates: { canonical: "/projects/" },
 };
 
 export default function ProjectsPage() {

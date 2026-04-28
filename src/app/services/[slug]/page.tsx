@@ -19,6 +19,7 @@ export async function generateMetadata(
   return {
     title: `${s.titleTh} (${s.title}) | K.S.Manufactory (1991)`,
     description: s.shortTh,
+    alternates: { canonical: `/services/${s.slug}/` },
   };
 }
 
