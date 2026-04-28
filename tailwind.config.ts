@@ -21,8 +21,8 @@ const config: Config = {
           950: "#0a1a4f",
         },
         accent: {
-          DEFAULT: "#fbd34d",
-          dark: "#eab308",
+          DEFAULT: "#fb923c",
+          dark: "#ea580c",
         },
       },
       fontFamily: {
