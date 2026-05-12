@@ -1,15 +1,19 @@
 /**
- * Cloudflare Workers config — serves the Next.js static export from ./out
- * directly via Workers Assets, no OpenNext / SSR / SQLite cache involved.
+ * Cloudflare Workers config — a tiny worker handles host/scheme
+ * canonicalization (apex→www, http→https) and delegates everything
+ * else to the Next.js static export in ./out via the ASSETS binding.
  *
  * Docs: https://developers.cloudflare.com/workers/static-assets/
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ksm1991",
+  "main": "worker.ts",
   "compatibility_date": "2025-03-01",
   "assets": {
     "directory": "./out",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "not_found_handling": "404-page"
   },
   "observability": {
